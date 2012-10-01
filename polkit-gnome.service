@@ -1,0 +1,7 @@
+[Unit]
+Description=Authentication Agent for PolicyKit
+Requires=dbus.socket
+
+[Service]
+ExecStart=@LIBEXECDIR@/polkit-gnome-authentication-agent-1
+
