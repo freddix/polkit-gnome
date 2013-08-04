@@ -1,7 +1,7 @@
 Summary:	GNOME dialogs for polkit
 Name:		polkit-gnome
 Version:	0.105
-Release:	4
+Release:	5
 License:	LGPL v2+ (polkit-gnome library), GPL v2+ (D-Bus service)
 Group:		X11/Applications
 Source0:	http://download.gnome.org/sources/polkit-gnome/%{version}/%{name}-%{version}.tar.xz
@@ -71,5 +71,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS NEWS TODO
 %dir %{_libexecdir}
 %attr(755,root,root) %{_libexecdir}/polkit-gnome-authentication-agent-1
+
+%if 0
 /usr/lib/systemd/user/%{name}.service
+%endif
 
